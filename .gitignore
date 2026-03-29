@@ -1,0 +1,8 @@
+# Vivado workspace (regenerated from TCL)
+vivado_project/
+.Xil/
+*.log
+*.jou
+*.str
+*.dmp
+*.pb
