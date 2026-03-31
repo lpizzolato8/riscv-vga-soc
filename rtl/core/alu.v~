@@ -1,8 +1,8 @@
+timescale 1ns/1ps
 
 module alu (
 
-    input  [31:0]  i_A, 
-    input  [31:0]  i_B,
+    input  [31:0]  i_A, i_B,
     input  [3:0]   i_OPSEL,
     
     output reg [31:0]  o_RESULT,

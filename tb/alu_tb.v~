@@ -1,0 +1,113 @@
+timescale 1ns/1ps
+
+module alu_tb ()
+
+    reg i_A;
+    reg i_B;
+    reg i_OPSEL;
+
+    wire o_RESULT;
+    wire zero;
+
+    alutest dut(
+
+        .i_A        (i_A),
+        .i_B        (i_B),
+        .i_OPSEL    (i_OPSEL),
+    
+        .o_RESULT   (o_RESULT),
+        .zero       (zero)
+
+
+    );
+
+    initial begin
+	
+	//add	
+        i_OPSEL = 4'b0000
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//sub	
+        i_OPSEL = 4'b0001
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//AND
+        i_OPSEL = 4'b0010
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//XOR
+        i_OPSEL = 4'b0011;
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//OR
+        i_OPSEL = 4'b0100;
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+
+	//SLL
+        i_OPSEL = 4'b0101;
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//SRL
+        i_OPSEL = 4'b0110;
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//SRA
+        i_OPSEL = 4'b0111;
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+
+	//signed comparison
+        i_OPSEL = 4'b1000;
+        i_A = -32'b5
+        i_B = 32b'25;
+
+        #20
+
+	//Unsigned Comparison
+        i_OPSEL = 4'b1001;
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+	//OR
+        i_OPSEL = 4'b0000
+        i_A = 32'b5;
+        i_B = 32b'25;
+
+        #20
+
+
+
+
+
+
+    end
+
+
+endmodule
