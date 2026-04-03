@@ -60,3 +60,8 @@ scripts/           Vivado project TCL, build utilities
 - Xilinx Vivado 2018.2+
 - RISC-V GCC (`riscv64-unknown-elf-gcc`)
 - Basys3 FPGA board
+
+## Resources
+
+https://www.eg.bucknell.edu/~csci320/2016-fall/wp-content/uploads/2015/08/verilog-std-1364-2005.pdf
+https://docs.riscv.org/reference/isa/unpriv/rv32.html
